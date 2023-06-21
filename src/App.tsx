@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="App">
-  test 1s W FADFAS sadasd
+        Github actions run
     </div>
   );
 }
