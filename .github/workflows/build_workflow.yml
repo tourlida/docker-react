@@ -1,0 +1,14 @@
+name: docker-react-app-gh-actions
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-docker-react-app:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile.dev --tag docker-react-app:$(date +%s)
